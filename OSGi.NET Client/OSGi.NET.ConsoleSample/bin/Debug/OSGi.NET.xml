@@ -89,220 +89,6 @@
             表示模块上下文，暴露了内核的操作
             </summary>
         </member>
-        <member name="T:OSGi.NET.Core.IBundleContext">
-            <summary>
-            表示模块上下文，暴露了内核的操作
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle">
-            <summary>
-            获取当前上下文关联的Bundle模块
-            </summary>
-            <returns>Bundle模块</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle(System.Int32)">
-            <summary>
-            根据序号获取已装载的指定Bundle
-            </summary>
-            <param name="index">序号</param>
-            <returns>Bundle模块</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle(System.String)">
-            <summary>
-            根据程序集名称获取已装载的指定Bundle
-            </summary>
-            <param name="assemblyName">程序集名称</param>
-            <returns>Bundle模块</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetBundles">
-            <summary>
-            获取所有Bundle模块
-            </summary>
-            <returns>Bundle模块列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.InstallBundle(System.String)">
-            <summary>
-            安装指定路径下的Bundle模块
-            </summary>
-            <param name="location">Bundle文件全路径</param>
-            <returns>已安装的Bundle实例</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.AddBundleListener(OSGi.NET.Listener.IBundleListener)">
-            <summary>
-            添加一个Bundle监听器实例
-            </summary>
-            <param name="listener">Bundle监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RemoveBundleListener(OSGi.NET.Listener.IBundleListener)">
-            <summary>
-            移除一个Bundle监听器实例
-            </summary>
-            <param name="listener">Bundle监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.AddExtensionListener(OSGi.NET.Listener.IExtensionListener)">
-            <summary>
-            添加一个Extension监听器实例
-            </summary>
-            <param name="listener">Extension监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RemoveExtensionListener(OSGi.NET.Listener.IExtensionListener)">
-            <summary>
-            移除一个Extension监听器实例
-            </summary>
-            <param name="listener">Extension监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.AddServiceListener(OSGi.NET.Listener.IServiceListener)">
-            <summary>
-            添加一个服务监听器实例
-            </summary>
-            <param name="listener">服务监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RemoveServiceListener(OSGi.NET.Listener.IServiceListener)">
-            <summary>
-            移除一个服务监听器
-            </summary>
-            <param name="listener">服务监听器实例</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService(System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            实现了一个服务接口的服务对象注册
-            </summary>
-            <param name="contract">服务约束</param>
-            <param name="service">服务对象</param>
-            <param name="properties">服务属性</param>
-            <returns>服务注册信息</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService(System.String[],System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            实现了多个服务接口的服务对象注册
-            </summary>
-            <param name="contracts">服务约束数组</param>
-            <param name="service">服务对象</param>
-            <param name="properties">服务属性</param>
-            <returns>服务注册信息</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService``1(System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            以泛型的方式注册服务对象
-            </summary>
-            <typeparam name="T">服务约束类型</typeparam>
-            <param name="service">服务对象</param>
-            <param name="properties">服务属性</param>
-            <returns>服务注册信息</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.UnRegisterService(OSGi.NET.Service.IServiceReference)">
-            <summary>
-            取消注册公开的服务对象
-            </summary>
-            <param name="serviceReference">服务引用</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReference(System.String)">
-            <summary>
-            根据服务约束获取服务(根据注册顺序获取第一个服务引用)
-            </summary>
-            <param name="contract">服务约束</param>
-            <returns>服务引用</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences(System.String)">
-            <summary>
-            根据服务约束获取服务引用列表
-            </summary>
-            <param name="contract">服务约束</param>
-            <returns>服务引用列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            根据服务约束及服务属性获取服务引用列表
-            </summary>
-            <param name="contract">服务约束</param>
-            <param name="properties">服务属性</param>
-            <returns>服务引用列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReference``1">
-            <summary>
-            以泛型方式根据服务约束类型获取服务
-            </summary>
-            <typeparam name="T">服务约束类型</typeparam>
-            <returns>服务引用</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences``1">
-            <summary>
-            以泛型方式根据服务约束类型获取服务引用列表
-            </summary>
-            <typeparam name="T">服务约束类型</typeparam>
-            <returns>服务引用列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences``1(System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            以泛型方式根据服务约束类型获取服务引用列表
-            </summary>
-            <typeparam name="T">服务约束类型</typeparam>
-            <param name="properties">服务属性</param>
-            <returns>服务引用列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetService(OSGi.NET.Service.IServiceReference)">
-            <summary>
-            根据服务引用获取对应的服务实例
-            </summary>
-            <param name="reference">服务引用</param>
-            <returns>服务对象</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetService``1">
-            <summary>
-            获取服务实例(强类型版本)
-            </summary>
-            <returns>服务对象</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetService``1(OSGi.NET.Service.IServiceReference)">
-            <summary>
-            根据服务引用获取对应的服务实例(强类型版本)
-            </summary>
-            <param name="reference">服务引用</param>
-            <returns>服务对象</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.GetUsingBundles(OSGi.NET.Service.IServiceReference)">
-            <summary>
-            获取正在使用指定服务的所有Bundle模块
-            </summary>
-            <param name="reference">服务引用</param>
-            <returns>正在使用服务的Bundle列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundleContext.UnGetService(OSGi.NET.Service.IServiceReference)">
-            <summary>
-            取消调用指定服务引用的服务实例
-            </summary>
-            <param name="reference">服务引用</param>
-            <returns>是否成功</returns>
-        </member>
-        <member name="E:OSGi.NET.Core.IBundleContext.ExtensionChanged">
-            <summary>
-            扩展点变更事件
-            </summary>
-        </member>
-        <member name="E:OSGi.NET.Core.IBundleContext.ServiceChanged">
-            <summary>
-            服务变更事件
-            </summary>
-        </member>
-        <member name="T:OSGi.NET.Event.IContextFireEvent">
-            <summary>
-            模块上下文触发事件接口
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Event.IContextFireEvent.FireExtensionChanged(OSGi.NET.Core.IBundle,OSGi.NET.Event.ExtensionEventArgs)">
-            <summary>
-            触发扩展变更事件
-            </summary>
-            <param name="bundle">引发的模块</param>
-            <param name="extensionEventArgs">扩展事件参数</param>
-        </member>
-        <member name="M:OSGi.NET.Event.IContextFireEvent.FireServiceChanged(OSGi.NET.Core.IBundle,OSGi.NET.Event.ServiceEventArgs)">
-            <summary>
-            触发服务变更事件
-            </summary>
-            <param name="bundle">引发的模块</param>
-            <param name="serviceEventArgs">服务事件参数</param>
-        </member>
         <member name="F:OSGi.NET.Core.BundleContext.framework">
             <summary>
             框架内核
@@ -529,6 +315,16 @@
             停止
             </summary>
         </member>
+        <member name="E:OSGi.NET.Core.BundleContext.ExtensionChanged">
+            <summary>
+            扩展变更事件
+            </summary>
+        </member>
+        <member name="E:OSGi.NET.Core.BundleContext.ServiceChanged">
+            <summary>
+            服务变更事件
+            </summary>
+        </member>
         <member name="M:OSGi.NET.Core.BundleContext.FireExtensionChanged(OSGi.NET.Core.IBundle,OSGi.NET.Event.ExtensionEventArgs)">
             <summary>
             触发扩展变更事件
@@ -543,117 +339,9 @@
             <param name="bundle">引发的模块</param>
             <param name="serviceEventArgs">服务事件参数</param>
         </member>
-        <member name="E:OSGi.NET.Core.BundleContext.ExtensionChanged">
-            <summary>
-            扩展变更事件
-            </summary>
-        </member>
-        <member name="E:OSGi.NET.Core.BundleContext.ServiceChanged">
-            <summary>
-            服务变更事件
-            </summary>
-        </member>
         <member name="T:OSGi.NET.Core.Bundle">
             <summary>
             Bundle表示由内核创建的一个插件
-            </summary>
-        </member>
-        <member name="T:OSGi.NET.Core.IBundle">
-            <summary>
-            Bundle表示由内核创建的一个插件
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.Start">
-            <summary>
-            启动
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.Stop">
-            <summary>
-            停止
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetState">
-            <summary>
-            获取当前Bundle状态
-            </summary>
-            <returns>Bundle状态</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetVersion">
-            <summary>
-            获取当前Bundle版本信息
-            </summary>
-            <returns>Bundle版本信息</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetSymbolicName">
-            <summary>
-            获取当前Bundle符号名称
-            </summary>
-            <returns>Bundle符号名称</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleAssemblyFullName">
-            <summary>
-            获取当前Bundle程序集全名
-            </summary>
-            <returns>Bundle程序集全名</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetManifest">
-            <summary>
-            获取当前Bundle程序集清单数据
-            </summary>
-            <returns>Bundle程序清单数据</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleContext">
-            <summary>
-            获取当前Bundle上下文对象
-            </summary>
-            <returns>Bundle上下文对象</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetExtensionPoints">
-            <summary>
-            获取当前Bundle扩展点
-            </summary>
-            <returns>扩展点列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetExtensionDatas">
-            <summary>
-            获取当前Bundle扩展的扩展数据
-            </summary>
-            <returns>扩展数据列表</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleDirectoryPath">
-            <summary>
-            获取当前Bundle目录
-            </summary>
-            <returns>Bundle目录</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleAssemblyFileName">
-            <summary>
-            获取当前Bundle程序集文件名称
-            </summary>
-            <returns>Bundle程序集文件名称</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleManifestData">
-            <summary>
-            获取模块清单数据
-            </summary>
-            <returns>清单数据节点</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.GetBundleStartLevel">
-            <summary>
-            获取当前Bundle启动级别
-            </summary>
-            <returns>Bundle启动级别</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.Update(System.String)">
-            <summary>
-            指定路径更新当前Bundle
-            </summary>
-            <param name="zipFile">更新的Bundle路径</param>
-        </member>
-        <member name="M:OSGi.NET.Core.IBundle.UnInstall">
-            <summary>
-            卸载当前Bundle
             </summary>
         </member>
         <member name="F:OSGi.NET.Core.Bundle.log">
@@ -987,6 +675,24 @@
             框架内核构造工厂
             </summary>
         </member>
+        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework">
+            <summary>
+            创建一个框架内核实例
+            </summary>
+            <returns>框架内核实例</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework(System.Collections.Generic.IList{OSGi.NET.Extension.ExtensionPoint})">
+            <summary>
+            创建一个框架内核实例，扩展点支持
+            </summary>
+            <returns>框架内核实例</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework(System.Collections.Generic.IList{OSGi.NET.Extension.ExtensionData})">
+            <summary>
+            创建一个框架内核实例，扩展数据支持
+            </summary>
+            <returns>框架内核实例</returns>
+        </member>
         <member name="T:OSGi.NET.Core.Root.IFrameworkFactory">
             <summary>
             框架内核构造工厂
@@ -1006,25 +712,7 @@
         </member>
         <member name="M:OSGi.NET.Core.Root.IFrameworkFactory.CreateFramework(System.Collections.Generic.IList{OSGi.NET.Extension.ExtensionData})">
             <summary>
-            创建一个框架内核实例,扩展点支持
-            </summary>
-            <returns>框架内核实例</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework">
-            <summary>
-            创建一个框架内核实例
-            </summary>
-            <returns>框架内核实例</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework(System.Collections.Generic.IList{OSGi.NET.Extension.ExtensionPoint})">
-            <summary>
-            创建一个框架内核实例，扩展点支持
-            </summary>
-            <returns>框架内核实例</returns>
-        </member>
-        <member name="M:OSGi.NET.Core.Root.FrameworkFactory.CreateFramework(System.Collections.Generic.IList{OSGi.NET.Extension.ExtensionData})">
-            <summary>
-            创建一个框架内核实例，扩展数据支持
+            创建一个框架内核实例,扩展数据支持
             </summary>
             <returns>框架内核实例</returns>
         </member>
@@ -1159,389 +847,10 @@
             <param name="properties">服务属性</param>
             <returns>服务引用列表</returns>
         </member>
-        <member name="T:OSGi.NET.Event.BundleEventArgs">
-            <summary>
-            Bundle事件参数
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.INSTALLED">
-            <summary>
-            已安装
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.STARTED">
-            <summary>
-            已启动
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.STOPPED">
-            <summary>
-            已停止
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.RESOLVED">
-            <summary>
-            已装载
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.STARTING">
-            <summary>
-            启动中
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.STOPPING">
-            <summary>
-            暂停中
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.state">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.BundleEventArgs.bundle">
-            <summary>
-            模块
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Event.BundleEventArgs.#ctor(System.Int32,OSGi.NET.Core.IBundle)">
-            <summary>
-            Bundle事件参数
-            </summary>
-            <param name="state">状态</param>
-            <param name="bundle">模块</param>
-        </member>
-        <member name="M:OSGi.NET.Event.BundleEventArgs.GetBundle">
-            <summary>
-            获取Bundle对象
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Event.BundleEventArgs.GetState">
-            <summary>
-            获取Bundle状态
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:OSGi.NET.Event.ExtensionEventArgs">
-            <summary>
-            扩展事件参数
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ExtensionEventArgs.LOAD">
-            <summary>
-            加载扩展
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ExtensionEventArgs.UNLOAD">
-            <summary>
-            卸载扩展
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ExtensionEventArgs.state">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ExtensionEventArgs.extensionPoint">
-            <summary>
-            扩展点
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ExtensionEventArgs.extensionData">
-            <summary>
-            扩展点数据
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Event.ExtensionEventArgs.#ctor(System.Int32,OSGi.NET.Extension.ExtensionPoint,OSGi.NET.Extension.ExtensionData)">
-            <summary>
-            服务事件参数
-            </summary>
-            <param name="state">状态</param>
-            <param name="extensionPoint">扩展点</param>
-            <param name="extensionData">扩展点数据</param>
-        </member>
-        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetState">
-            <summary>
-            扩展点数据加载状态
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetExtensionPoint">
-            <summary>
-            获取扩展点
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetExtensionData">
-            <summary>
-            获取扩展点数据
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:OSGi.NET.Event.IFrameworkFireEvent">
-            <summary>
-            内核触发事件接口
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireServiceEvent(OSGi.NET.Event.ServiceEventArgs)">
-            <summary>
-            触发服务变更事件
-            </summary>
-            <param name="serviceEvent">服务事件参数</param>
-        </member>
-        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireBundleEvent(OSGi.NET.Event.BundleEventArgs)">
-            <summary>
-            触发Bundle状态变更事件
-            </summary>
-            <param name="bundleEvent">Bundle事件参数</param>
-        </member>
-        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireExtensionEvent(OSGi.NET.Event.ExtensionEventArgs)">
-            <summary>
-            触发Extension变更事件
-            </summary>
-            <param name="extensionEvent">Extension事件参数</param>
-        </member>
-        <member name="T:OSGi.NET.Event.ServiceEventArgs">
-            <summary>
-            服务事件参数
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ServiceEventArgs.REGISTERED">
-            <summary>
-            注册服务
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ServiceEventArgs.UNREGISTERING">
-            <summary>
-            取消注册
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ServiceEventArgs.state">
-            <summary>
-            状态
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ServiceEventArgs.contracts">
-            <summary>
-            服务约束
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Event.ServiceEventArgs.reference">
-            <summary>
-            服务引用
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Event.ServiceEventArgs.#ctor(System.Int32,System.String[],OSGi.NET.Service.IServiceReference)">
-            <summary>
-            服务事件参数
-            </summary>
-            <param name="state">服务状态</param>
-            <param name="contracts">服务约束</param>
-            <param name="reference">服务引用</param>
-        </member>
-        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetServiceReference">
-            <summary>
-            获取服务引用
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetSercieContracts">
-            <summary>
-            获取服务约束数组
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetState">
-            <summary>
-            获取服务变更状态
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:OSGi.NET.Extension.ExtensionData">
-            <summary>
-            扩展数据实体
-            </summary>
-        </member>
-        <member name="P:OSGi.NET.Extension.ExtensionData.Name">
-            <summary>
-            扩展点名称
-            </summary>
-        </member>
-        <member name="P:OSGi.NET.Extension.ExtensionData.ExtensionList">
-            <summary>
-            扩展数据节点集合
-            </summary>
-        </member>
-        <member name="P:OSGi.NET.Extension.ExtensionData.Owner">
-            <summary>
-            拥有Bundle
-            </summary>
-        </member>
-        <member name="T:OSGi.NET.Extension.ExtensionPoint">
-            <summary>
-            扩展点实体
-            </summary>
-        </member>
-        <member name="P:OSGi.NET.Extension.ExtensionPoint.Name">
-            <summary>
-            扩展点名称
-            </summary>
-        </member>
-        <member name="P:OSGi.NET.Extension.ExtensionPoint.Owner">
-            <summary>
-            拥有Bundle
-            </summary>
-        </member>
-        <member name="T:OSGi.NET.Listener.IBundleListener">
-            <summary>
-            Bundle状态监听器
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Listener.IBundleListener.BundleChanged(OSGi.NET.Event.BundleEventArgs)">
-            <summary>
-            Bundle状态变更
-            </summary>
-            <param name="e">Bundle事件参数</param>
-        </member>
-        <member name="T:OSGi.NET.Listener.IExtensionListener">
-            <summary>
-            Bundle扩展点监听器
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Listener.IExtensionListener.ExtensionChanged(OSGi.NET.Event.ExtensionEventArgs)">
-            <summary>
-            Bundle扩展点变更
-            </summary>
-            <param name="e">扩展点事件参数</param>
-        </member>
-        <member name="T:OSGi.NET.Listener.IServiceListener">
-            <summary>
-            服务状态监听器
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Listener.IServiceListener.ServiceChanged(OSGi.NET.Event.ServiceEventArgs)">
-            <summary>
-            服务状态变更
-            </summary>
-            <param name="serviceEvent">服务事件参数</param>
-        </member>
-        <member name="T:OSGi.NET.Provider.BundleAssemblyProvider">
-            <summary>
-            Bundle关联程序集提供程序
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Provider.BundleAssemblyProvider.AllBundleRefAssemblyDict">
-            <summary>
-            所有Bundle引用程序集
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Provider.BundleAssemblyProvider.AllShareRefAssemblyDict">
-            <summary>
-            通过反射加载的程序集
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.#cctor">
-            <summary>
-            静态构造
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CurrentDomainAssemblyResolve(System.Object,System.ResolveEventArgs)">
-            <summary>
-            当前域加载程序集触发事件
-            </summary>
-            <param name="sender"></param>
-            <param name="args"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.AddAssembly(System.String,System.Reflection.Assembly)">
-            <summary>
-            加入到程序集管理清单
-            </summary>
-            <param name="assemblyName">程序集名称</param>
-            <param name="assembly">程序集</param>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.RemoveAssembly(System.String)">
-            <summary>
-            从程序集管理清单移除
-            </summary>
-            <param name="assemblyName">程序集</param>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.AddShareAssembly(System.String,System.Reflection.Assembly)">
-            <summary>
-            添加程序集至共享程序集管理清单
-            </summary>
-            <param name="assemblyName">程序集名称</param>
-            <param name="assembly">程序集</param>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CheckHasShareLib(System.String)">
-            <summary>
-            检测程序集是否属于共享程序集
-            </summary>
-            <param name="assemblyFullName">程序集全名称</param>
-            <returns>是否存在</returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetShareAssembly(System.String)">
-            <summary>
-            返回共享程序集
-            </summary>
-            <param name="assemblyFullName">程序集全名称</param>
-            <returns>共享程序集</returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CheckHasBundleLib(System.String)">
-            <summary>
-            检测程序集是否存在同名Bundle Lib程序集
-            </summary>
-            <param name="assemblyFullName">程序集全名称</param>
-            <returns>是否存在</returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetBundleLibAssembly(System.String)">
-            <summary>
-            返回Bundle Lib程序集
-            </summary>
-            <param name="assemblyFullName">程序集全名称</param>
-            <returns>Bundle Lib程序集</returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetGacAssembly(System.String)">
-            <summary>
-            返回GAC程序集
-            </summary>
-            <param name="assemblyFullName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetAssembly(System.String)">
-            <summary>
-            获取程序集
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetManagedAssemblies">
-            <summary>
-            获取所有已管理的程序集
-            </summary>
-            <returns>管理的程序集</returns>
-        </member>
         <member name="T:OSGi.NET.Core.Root.Framework">
             <summary>
             框架内核，内核也作为一个Bundle，用来启动其他Bundle组件
             </summary>
-        </member>
-        <member name="T:OSGi.NET.Core.Root.IFramework">
-            <summary>
-            框架内核，内核也作为一个Bundle，用来启动其他Bundle组件
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.Root.IFramework.Init">
-            <summary>
-            初始化
-            </summary>
-        </member>
-        <member name="M:OSGi.NET.Core.Root.IFramework.GetBundles">
-            <summary>
-            获取所有Bundle模块
-            </summary>
-            <returns>所有已装载Bundle列表</returns>
         </member>
         <member name="F:OSGi.NET.Core.Root.Framework.FRAMEWORK_LOCK_FILE">
             <summary>
@@ -1931,6 +1240,120 @@
             <param name="bundle">调用服务的Bundle</param>
             <returns>是否成功</returns>
         </member>
+        <member name="T:OSGi.NET.Core.Root.IFramework">
+            <summary>
+            框架内核，内核也作为一个Bundle，用来启动其他Bundle组件
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.Root.IFramework.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.Root.IFramework.GetBundles">
+            <summary>
+            获取所有Bundle模块
+            </summary>
+            <returns>所有已装载Bundle列表</returns>
+        </member>
+        <member name="T:OSGi.NET.Core.IBundle">
+            <summary>
+            Bundle表示由内核创建的一个插件
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.Stop">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetState">
+            <summary>
+            获取当前Bundle状态
+            </summary>
+            <returns>Bundle状态</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetVersion">
+            <summary>
+            获取当前Bundle版本信息
+            </summary>
+            <returns>Bundle版本信息</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetSymbolicName">
+            <summary>
+            获取当前Bundle符号名称
+            </summary>
+            <returns>Bundle符号名称</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleAssemblyFullName">
+            <summary>
+            获取当前Bundle程序集全名
+            </summary>
+            <returns>Bundle程序集全名</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetManifest">
+            <summary>
+            获取当前Bundle程序集清单数据
+            </summary>
+            <returns>Bundle程序清单数据</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleContext">
+            <summary>
+            获取当前Bundle上下文对象
+            </summary>
+            <returns>Bundle上下文对象</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetExtensionPoints">
+            <summary>
+            获取当前Bundle扩展点
+            </summary>
+            <returns>扩展点列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetExtensionDatas">
+            <summary>
+            获取当前Bundle扩展的扩展数据
+            </summary>
+            <returns>扩展数据列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleDirectoryPath">
+            <summary>
+            获取当前Bundle目录
+            </summary>
+            <returns>Bundle目录</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleAssemblyFileName">
+            <summary>
+            获取当前Bundle程序集文件名称
+            </summary>
+            <returns>Bundle程序集文件名称</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleManifestData">
+            <summary>
+            获取模块清单数据
+            </summary>
+            <returns>清单数据节点</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.GetBundleStartLevel">
+            <summary>
+            获取当前Bundle启动级别
+            </summary>
+            <returns>Bundle启动级别</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.Update(System.String)">
+            <summary>
+            指定路径更新当前Bundle
+            </summary>
+            <param name="zipFile">更新的Bundle路径</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundle.UnInstall">
+            <summary>
+            卸载当前Bundle
+            </summary>
+        </member>
         <member name="T:OSGi.NET.Core.IBundleActivator">
             <summary>
             Bundle激活器
@@ -1948,9 +1371,591 @@
             </summary>
             <param name="context"></param>
         </member>
+        <member name="T:OSGi.NET.Core.IBundleContext">
+            <summary>
+            表示模块上下文，暴露了内核的操作
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle">
+            <summary>
+            获取当前上下文关联的Bundle模块
+            </summary>
+            <returns>Bundle模块</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle(System.Int32)">
+            <summary>
+            根据序号获取已装载的指定Bundle
+            </summary>
+            <param name="index">序号</param>
+            <returns>Bundle模块</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetBundle(System.String)">
+            <summary>
+            根据程序集名称获取已装载的指定Bundle
+            </summary>
+            <param name="assemblyName">程序集名称</param>
+            <returns>Bundle模块</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetBundles">
+            <summary>
+            获取所有Bundle模块
+            </summary>
+            <returns>Bundle模块列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.InstallBundle(System.String)">
+            <summary>
+            安装指定路径下的Bundle模块
+            </summary>
+            <param name="location">Bundle文件全路径</param>
+            <returns>已安装的Bundle实例</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.AddBundleListener(OSGi.NET.Listener.IBundleListener)">
+            <summary>
+            添加一个Bundle监听器实例
+            </summary>
+            <param name="listener">Bundle监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RemoveBundleListener(OSGi.NET.Listener.IBundleListener)">
+            <summary>
+            移除一个Bundle监听器实例
+            </summary>
+            <param name="listener">Bundle监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.AddExtensionListener(OSGi.NET.Listener.IExtensionListener)">
+            <summary>
+            添加一个Extension监听器实例
+            </summary>
+            <param name="listener">Extension监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RemoveExtensionListener(OSGi.NET.Listener.IExtensionListener)">
+            <summary>
+            移除一个Extension监听器实例
+            </summary>
+            <param name="listener">Extension监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.AddServiceListener(OSGi.NET.Listener.IServiceListener)">
+            <summary>
+            添加一个服务监听器实例
+            </summary>
+            <param name="listener">服务监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RemoveServiceListener(OSGi.NET.Listener.IServiceListener)">
+            <summary>
+            移除一个服务监听器
+            </summary>
+            <param name="listener">服务监听器实例</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService(System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            实现了一个服务接口的服务对象注册
+            </summary>
+            <param name="contract">服务约束</param>
+            <param name="service">服务对象</param>
+            <param name="properties">服务属性</param>
+            <returns>服务注册信息</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService(System.String[],System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            实现了多个服务接口的服务对象注册
+            </summary>
+            <param name="contracts">服务约束数组</param>
+            <param name="service">服务对象</param>
+            <param name="properties">服务属性</param>
+            <returns>服务注册信息</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.RegisterService``1(System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            以泛型的方式注册服务对象
+            </summary>
+            <typeparam name="T">服务约束类型</typeparam>
+            <param name="service">服务对象</param>
+            <param name="properties">服务属性</param>
+            <returns>服务注册信息</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.UnRegisterService(OSGi.NET.Service.IServiceReference)">
+            <summary>
+            取消注册公开的服务对象
+            </summary>
+            <param name="serviceReference">服务引用</param>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReference(System.String)">
+            <summary>
+            根据服务约束获取服务(根据注册顺序获取第一个服务引用)
+            </summary>
+            <param name="contract">服务约束</param>
+            <returns>服务引用</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences(System.String)">
+            <summary>
+            根据服务约束获取服务引用列表
+            </summary>
+            <param name="contract">服务约束</param>
+            <returns>服务引用列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            根据服务约束及服务属性获取服务引用列表
+            </summary>
+            <param name="contract">服务约束</param>
+            <param name="properties">服务属性</param>
+            <returns>服务引用列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReference``1">
+            <summary>
+            以泛型方式根据服务约束类型获取服务
+            </summary>
+            <typeparam name="T">服务约束类型</typeparam>
+            <returns>服务引用</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences``1">
+            <summary>
+            以泛型方式根据服务约束类型获取服务引用列表
+            </summary>
+            <typeparam name="T">服务约束类型</typeparam>
+            <returns>服务引用列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetServiceReferences``1(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            以泛型方式根据服务约束类型获取服务引用列表
+            </summary>
+            <typeparam name="T">服务约束类型</typeparam>
+            <param name="properties">服务属性</param>
+            <returns>服务引用列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetService(OSGi.NET.Service.IServiceReference)">
+            <summary>
+            根据服务引用获取对应的服务实例
+            </summary>
+            <param name="reference">服务引用</param>
+            <returns>服务对象</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetService``1">
+            <summary>
+            获取服务实例(强类型版本)
+            </summary>
+            <returns>服务对象</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetService``1(OSGi.NET.Service.IServiceReference)">
+            <summary>
+            根据服务引用获取对应的服务实例(强类型版本)
+            </summary>
+            <param name="reference">服务引用</param>
+            <returns>服务对象</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.GetUsingBundles(OSGi.NET.Service.IServiceReference)">
+            <summary>
+            获取正在使用指定服务的所有Bundle模块
+            </summary>
+            <param name="reference">服务引用</param>
+            <returns>正在使用服务的Bundle列表</returns>
+        </member>
+        <member name="M:OSGi.NET.Core.IBundleContext.UnGetService(OSGi.NET.Service.IServiceReference)">
+            <summary>
+            取消调用指定服务引用的服务实例
+            </summary>
+            <param name="reference">服务引用</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="E:OSGi.NET.Core.IBundleContext.ExtensionChanged">
+            <summary>
+            扩展点变更事件
+            </summary>
+        </member>
+        <member name="E:OSGi.NET.Core.IBundleContext.ServiceChanged">
+            <summary>
+            服务变更事件
+            </summary>
+        </member>
+        <member name="T:OSGi.NET.Event.BundleEventArgs">
+            <summary>
+            Bundle事件参数
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.INSTALLED">
+            <summary>
+            已安装
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.STARTED">
+            <summary>
+            已启动
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.STOPPED">
+            <summary>
+            已停止
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.RESOLVED">
+            <summary>
+            已装载
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.STARTING">
+            <summary>
+            启动中
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.STOPPING">
+            <summary>
+            暂停中
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.BundleEventArgs.bundle">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Event.BundleEventArgs.#ctor(System.Int32,OSGi.NET.Core.IBundle)">
+            <summary>
+            Bundle事件参数
+            </summary>
+            <param name="state">状态</param>
+            <param name="bundle">模块</param>
+        </member>
+        <member name="M:OSGi.NET.Event.BundleEventArgs.GetBundle">
+            <summary>
+            获取Bundle对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Event.BundleEventArgs.GetState">
+            <summary>
+            获取Bundle状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OSGi.NET.Event.ExtensionEventArgs">
+            <summary>
+            扩展事件参数
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ExtensionEventArgs.LOAD">
+            <summary>
+            加载扩展
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ExtensionEventArgs.UNLOAD">
+            <summary>
+            卸载扩展
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ExtensionEventArgs.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ExtensionEventArgs.extensionPoint">
+            <summary>
+            扩展点
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ExtensionEventArgs.extensionData">
+            <summary>
+            扩展点数据
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Event.ExtensionEventArgs.#ctor(System.Int32,OSGi.NET.Extension.ExtensionPoint,OSGi.NET.Extension.ExtensionData)">
+            <summary>
+            服务事件参数
+            </summary>
+            <param name="state">状态</param>
+            <param name="extensionPoint">扩展点</param>
+            <param name="extensionData">扩展点数据</param>
+        </member>
+        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetState">
+            <summary>
+            扩展点数据加载状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetExtensionPoint">
+            <summary>
+            获取扩展点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Event.ExtensionEventArgs.GetExtensionData">
+            <summary>
+            获取扩展点数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OSGi.NET.Event.IFrameworkFireEvent">
+            <summary>
+            内核触发事件接口
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireServiceEvent(OSGi.NET.Event.ServiceEventArgs)">
+            <summary>
+            触发服务变更事件
+            </summary>
+            <param name="serviceEvent">服务事件参数</param>
+        </member>
+        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireBundleEvent(OSGi.NET.Event.BundleEventArgs)">
+            <summary>
+            触发Bundle状态变更事件
+            </summary>
+            <param name="bundleEvent">Bundle事件参数</param>
+        </member>
+        <member name="M:OSGi.NET.Event.IFrameworkFireEvent.FireExtensionEvent(OSGi.NET.Event.ExtensionEventArgs)">
+            <summary>
+            触发Extension变更事件
+            </summary>
+            <param name="extensionEvent">Extension事件参数</param>
+        </member>
+        <member name="T:OSGi.NET.Event.ServiceEventArgs">
+            <summary>
+            服务事件参数
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ServiceEventArgs.REGISTERED">
+            <summary>
+            注册服务
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ServiceEventArgs.UNREGISTERING">
+            <summary>
+            取消注册
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ServiceEventArgs.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ServiceEventArgs.contracts">
+            <summary>
+            服务约束
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Event.ServiceEventArgs.reference">
+            <summary>
+            服务引用
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Event.ServiceEventArgs.#ctor(System.Int32,System.String[],OSGi.NET.Service.IServiceReference)">
+            <summary>
+            服务事件参数
+            </summary>
+            <param name="state">服务状态</param>
+            <param name="contracts">服务约束</param>
+            <param name="reference">服务引用</param>
+        </member>
+        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetServiceReference">
+            <summary>
+            获取服务引用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetSercieContracts">
+            <summary>
+            获取服务约束数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Event.ServiceEventArgs.GetState">
+            <summary>
+            获取服务变更状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OSGi.NET.Event.IContextFireEvent">
+            <summary>
+            模块上下文触发事件接口
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Event.IContextFireEvent.FireExtensionChanged(OSGi.NET.Core.IBundle,OSGi.NET.Event.ExtensionEventArgs)">
+            <summary>
+            触发扩展变更事件
+            </summary>
+            <param name="bundle">引发的模块</param>
+            <param name="extensionEventArgs">扩展事件参数</param>
+        </member>
+        <member name="M:OSGi.NET.Event.IContextFireEvent.FireServiceChanged(OSGi.NET.Core.IBundle,OSGi.NET.Event.ServiceEventArgs)">
+            <summary>
+            触发服务变更事件
+            </summary>
+            <param name="bundle">引发的模块</param>
+            <param name="serviceEventArgs">服务事件参数</param>
+        </member>
+        <member name="T:OSGi.NET.Extension.ExtensionData">
+            <summary>
+            扩展数据实体
+            </summary>
+        </member>
+        <member name="P:OSGi.NET.Extension.ExtensionData.Name">
+            <summary>
+            扩展点名称
+            </summary>
+        </member>
+        <member name="P:OSGi.NET.Extension.ExtensionData.ExtensionList">
+            <summary>
+            扩展数据节点集合
+            </summary>
+        </member>
+        <member name="P:OSGi.NET.Extension.ExtensionData.Owner">
+            <summary>
+            拥有Bundle
+            </summary>
+        </member>
+        <member name="T:OSGi.NET.Extension.ExtensionPoint">
+            <summary>
+            扩展点实体
+            </summary>
+        </member>
+        <member name="P:OSGi.NET.Extension.ExtensionPoint.Name">
+            <summary>
+            扩展点名称
+            </summary>
+        </member>
+        <member name="P:OSGi.NET.Extension.ExtensionPoint.Owner">
+            <summary>
+            拥有Bundle
+            </summary>
+        </member>
+        <member name="T:OSGi.NET.Listener.IBundleListener">
+            <summary>
+            Bundle状态监听器
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Listener.IBundleListener.BundleChanged(OSGi.NET.Event.BundleEventArgs)">
+            <summary>
+            Bundle状态变更
+            </summary>
+            <param name="e">Bundle事件参数</param>
+        </member>
+        <member name="T:OSGi.NET.Listener.IExtensionListener">
+            <summary>
+            Bundle扩展点监听器
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Listener.IExtensionListener.ExtensionChanged(OSGi.NET.Event.ExtensionEventArgs)">
+            <summary>
+            Bundle扩展点变更
+            </summary>
+            <param name="e">扩展点事件参数</param>
+        </member>
+        <member name="T:OSGi.NET.Listener.IServiceListener">
+            <summary>
+            服务状态监听器
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Listener.IServiceListener.ServiceChanged(OSGi.NET.Event.ServiceEventArgs)">
+            <summary>
+            服务状态变更
+            </summary>
+            <param name="serviceEvent">服务事件参数</param>
+        </member>
+        <member name="T:OSGi.NET.Provider.BundleAssemblyProvider">
+            <summary>
+            Bundle关联程序集提供程序
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Provider.BundleAssemblyProvider.AllBundleRefAssemblyDict">
+            <summary>
+            所有Bundle引用程序集
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Provider.BundleAssemblyProvider.AllShareRefAssemblyDict">
+            <summary>
+            通过反射加载的程序集
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CurrentDomainAssemblyResolve(System.Object,System.ResolveEventArgs)">
+            <summary>
+            当前域加载程序集触发事件
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.AddAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            加入到程序集管理清单
+            </summary>
+            <param name="assemblyName">程序集名称</param>
+            <param name="assembly">程序集</param>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.RemoveAssembly(System.String)">
+            <summary>
+            从程序集管理清单移除
+            </summary>
+            <param name="assemblyName">程序集</param>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.AddShareAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            添加程序集至共享程序集管理清单
+            </summary>
+            <param name="assemblyName">程序集名称</param>
+            <param name="assembly">程序集</param>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CheckHasShareLib(System.String)">
+            <summary>
+            检测程序集是否属于共享程序集
+            </summary>
+            <param name="assemblyFullName">程序集全名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetShareAssembly(System.String)">
+            <summary>
+            返回共享程序集
+            </summary>
+            <param name="assemblyFullName">程序集全名称</param>
+            <returns>共享程序集</returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.CheckHasBundleLib(System.String)">
+            <summary>
+            检测程序集是否存在同名Bundle Lib程序集
+            </summary>
+            <param name="assemblyFullName">程序集全名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetBundleLibAssembly(System.String)">
+            <summary>
+            返回Bundle Lib程序集
+            </summary>
+            <param name="assemblyFullName">程序集全名称</param>
+            <returns>Bundle Lib程序集</returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetGacAssembly(System.String)">
+            <summary>
+            返回GAC程序集
+            </summary>
+            <param name="assemblyFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetAssembly(System.String)">
+            <summary>
+            获取程序集
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OSGi.NET.Provider.BundleAssemblyProvider.GetManagedAssemblies">
+            <summary>
+            获取所有已管理的程序集
+            </summary>
+            <returns>管理的程序集</returns>
+        </member>
         <member name="T:OSGi.NET.Provider.BundleConfigProvider">
             <summary>
             配置信息提供程序
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Provider.BundleConfigProvider.OSGi_NET_CONFIG">
+            <summary>
+            OSGi配置文件名称常量
             </summary>
         </member>
         <member name="F:OSGi.NET.Provider.BundleConfigProvider.OSGi_NET_BUNDLE_STORAGE">
@@ -2013,21 +2018,6 @@
             Bundle卸载目录
             </summary>
         </member>
-        <member name="F:OSGi.NET.Provider.BundleConfigProvider.StartLevel">
-            <summary>
-            启动级别
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Provider.BundleConfigProvider.AssemblyName">
-            <summary>
-            程序集名称
-            </summary>
-        </member>
-        <member name="F:OSGi.NET.Provider.BundleConfigProvider.OSGi_NET_CONFIG">
-            <summary>
-            OSGi配置文件名称常量
-            </summary>
-        </member>
         <member name="F:OSGi.NET.Provider.BundleConfigProvider.OSGi_NET_ALLTYPES_LOAD">
             <summary>
             对于依赖库或共享程序集是否全类型加载
@@ -2051,6 +2041,16 @@
         <member name="F:OSGi.NET.Provider.BundleConfigProvider.BundlesConfiguration">
             <summary>
             Bundles配置信息
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Provider.BundleConfigProvider.StartLevel">
+            <summary>
+            启动级别
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Provider.BundleConfigProvider.AssemblyName">
+            <summary>
+            程序集名称
             </summary>
         </member>
         <member name="M:OSGi.NET.Provider.BundleConfigProvider.#cctor">
@@ -2351,11 +2351,6 @@
             跨域程序集分析器
             </summary>
         </member>
-        <member name="F:OSGi.NET.Utils.AssemblyResolver.BUNDLE_MANIFEST_REQUIRED_BUNDLE_VERSION">
-            <summary>
-            程序集版本关键字
-            </summary>
-        </member>
         <member name="F:OSGi.NET.Utils.AssemblyResolver.assembly">
             <summary>
             程序集
@@ -2374,6 +2369,11 @@
         <member name="F:OSGi.NET.Utils.AssemblyResolver.attributeDataList">
             <summary>
             程序集描述特性信息
+            </summary>
+        </member>
+        <member name="F:OSGi.NET.Utils.AssemblyResolver.BUNDLE_MANIFEST_REQUIRED_BUNDLE_VERSION">
+            <summary>
+            程序集版本关键字
             </summary>
         </member>
         <member name="M:OSGi.NET.Utils.AssemblyResolver.Init(System.Byte[],System.String,System.String)">
@@ -2471,6 +2471,13 @@
             
             </summary>
         </member>
+        <member name="T:OSGi.NET.Utils.CustomAssemblyResolver.ResolveAssemblyDefinitionDelegate">
+            <summary>
+            
+            </summary>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
         <member name="F:OSGi.NET.Utils.CustomAssemblyResolver.resolveAssemblyDefinition">
             <summary>
             
@@ -2486,13 +2493,6 @@
             
             </summary>
             <param name="assemblyNameReference"></param>
-            <returns></returns>
-        </member>
-        <member name="T:OSGi.NET.Utils.CustomAssemblyResolver.ResolveAssemblyDefinitionDelegate">
-            <summary>
-            
-            </summary>
-            <param name="assemblyName"></param>
             <returns></returns>
         </member>
         <member name="T:OSGi.NET.Utils.MonoAssemblyResolver">

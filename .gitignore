@@ -1,0 +1,15 @@
+.vs/
+DotfuscatedLib/
+DotfuscatedTemp/
+lib/
+bin/
+obj/
+*.vssscc
+*.lib
+Express/
+*.suo
+*.vspscc
+*.bak
+*.pdb
+*.exe
+*.dll
